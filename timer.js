@@ -1,14 +1,27 @@
-// Initialize variables
-let timer;
-let startTime;
+let isTimerRunning = false;
+let timerInterval;
+let startTime = 0; // Variable to store the start time
 
-// Function to start the timer
+
+
 function startTimer() {
-    startTime = new Date().getTime();
-    timer = setInterval(updateClock, 1000);
+    if (!isTimerRunning) {
+        isTimerRunning = true;
+        startTime = Date.now() - startTime; // Calculate elapsed time since start
+        timerInterval = setInterval(updateClock, 1000); // Update clock every second
+    }
 }
 
-// Function to stop the timer
+function stopTimer() {
+    if (isTimerRunning) {
+        isTimerRunning = false;
+        clearInterval(timerInterval);
+        // Store the elapsed time when the timer is stopped
+        startTime = Date.now() - startTime;
+    }
+}
+
+
 
 
 // Function to update the clock
@@ -22,18 +35,17 @@ function updateClock() {
 
 
     let clock = document.getElementById("clock").innerHTML = `${minutes}M:${seconds}S`;
-
-    
-    
-    
 }
-function stopTimer(updateClock) {
-    clearInterval(timer);
-    }
-
-function reset(myfunctioncallback) {
+function reset(){
+    clearInterval(timerInterval);
     document.getElementById("clock").innerHTML = "0M:0S";
-    clearInterval(timer);
+    isTimerRunning = false;
+    startTime = 0;
 }
+
+
+
+
+
 
 

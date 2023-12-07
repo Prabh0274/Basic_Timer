@@ -1,0 +1,95 @@
+@media screen and (max-width: 768px) {
+    
+}
+#h1{
+    display: flexbox;
+    font-size: 50px;
+    font-weight: 700;
+    color: gray;
+    text-align: center;
+    flex: content;
+    flex-direction: row;
+    justify-content: center;
+    text-justify: inter-ideograph;
+    align-self: flex-end;    
+}
+#clock{
+    color: black;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 530px;
+    margin-right: 530px;
+    height: 50px;
+    margin-top: 350px;
+    background-color: white;
+    margin-inline: 1px;
+    
+}
+#clock{
+    background-color: wheat;
+    color: snow;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    display: flexbox;
+    justify-self: center;
+    align-self: center;
+    margin-left: 520px;
+}
+.buttons #start{
+    background-color: darkgray;
+    color: black;
+    width: 390px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: white;
+    cursor: pointer;
+}
+.buttons #stop{
+    background-color: darkgray;
+    color: black;
+    width: 390px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: white;
+    cursor: pointer;
+}
+.buttons #reset{
+    background-color: darkgray;
+    color: black;
+    width: 390px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: white;
+    cursor: pointer;
+}
+#darkmodebutton{
+    display: flexbox;
+    justify-content: center;
+    justify-self: right;
+    flex-direction: row;
+    align-self: flex-end;
+    background-image: url(darkicon.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    alt: darkmodebutton;
+    align-self: right;
+    float: right;
+    width: 40px;
+    height: 40px;
+    
+    color: white;
+    background-color: white;
+    border-color: white;
+    border-width: 0px;
+    cursor: pointer;
+}
+#hidden{
+    
+    color: black;
+}
